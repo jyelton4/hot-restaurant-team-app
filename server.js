@@ -15,19 +15,19 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // user information need to reserver table
-var reservation = {
-  name: "Bob",
-  phone: "1325765",
-   email: "jadf@gmail.com",
-   id: "1"
-}
-
-var waitlist = {
+var reservation = [{
   name: "",
   phone: "",
    email: "",
    id: ""
-}
+}]
+
+var waitlist = [{
+  name: "",
+  phone: "",
+   email: "",
+   id: ""
+}]
 // routes
 
 app.get("/", function(req, res) {
