@@ -30,7 +30,6 @@ var waitlist = {
 }
 // routes
 
-
 app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "home.html"));
   });
@@ -56,4 +55,3 @@ app.get("/tables", function(req, res) {
   });
   
   // input date to reservation if for 2 tables but rest for waitlist
-
