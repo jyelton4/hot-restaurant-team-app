@@ -16,21 +16,21 @@ app.use(bodyParser.json());
 
 // user information need to reserver table
 var reservation = {
-    name: "john doe",
-    phone: 030356565,
-    email: "du@gmail.com",
-    id: 1
+  name: "",
+  phone: "",
+   email: "",
+   id: ""
 }
 
 var waitlist = {
-  name: "john doe",
-    phone: 030356565,
-    email: "du@gmail.com",
-    id: 1
+  name: "",
+  phone: "",
+   email: "",
+   id: ""
 }
 // routes
 
-/*
+
 app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "home.html"));
   });
@@ -38,8 +38,8 @@ app.get("/reserve", function(req, res) {
     res.sendFile(path.join(__dirname, "reserve.html"));
   });
 app.get("/tables", function(req, res) {
-    res.sendFile(path.join(__dirname, "table.html"));
-  });*/
+    res.sendFile(path.join(__dirname, "tables.html"));
+  });
 
   //Displays all tables and waitlist
 
