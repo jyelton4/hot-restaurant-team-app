@@ -16,10 +16,10 @@ app.use(bodyParser.json());
 
 // user information need to reserver table
 var reservation = {
-  name: "",
-  phone: "",
-   email: "",
-   id: ""
+  name: "Bob",
+  phone: "1325765",
+   email: "jadf@gmail.com",
+   id: "1"
 }
 
 var waitlist = {

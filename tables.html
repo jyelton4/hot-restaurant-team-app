@@ -44,11 +44,32 @@
 
         <div>
             <p>
-                <a href="#">API Table Link</a> | <a href="#">API Wait List</a>
+                <a href="/api/tables">API Table Link</a> | <a href="/api/waitlist">API Wait List</a>
             </p>
         </div>
 
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <script>
+        
+        var getTablesData = function() {
+            $.get("/api/tables", function(data) {
+                $("#current-reservations-box .box-content").text(data.id + " | " + data.name);
+            });
+        };
+
+        var getWaitListData = function() {
+            $.get("/api/waitlist", function(data) {
+                $("#waitlist-box .box-content").text(data.id + " | " + data.name);
+            });
+        };
+
+        getTablesData();
+        getWaitListData();
+
+    </script>
     
 </body>
 </html>
