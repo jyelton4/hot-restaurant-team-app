@@ -55,3 +55,26 @@ app.get("/tables", function(req, res) {
   });
   
   // input date to reservation if for 2 tables but rest for waitlist
+  app.post("/api/tables", function(req, res) {
+    // req.body hosts is equal to the JSON post sent from the user
+    // This works because of our body-parser middleware
+    var newReservation = req.body;
+  
+    console.log(newReservation);
+  
+    reservation.push(newReservation);
+  
+    res.json(newReservation);
+  });
+  
+  app.post("/api/waitlists", function(req, res) {
+    // req.body hosts is equal to the JSON post sent from the user
+    // This works because of our body-parser middleware
+    var newwaitlist = req.body;
+  
+    console.log(newwaitlist);
+  
+    waitlist.push(newwaitlist);
+  
+    res.json(newwaitlist);
+  });
